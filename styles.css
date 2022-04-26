@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+section{
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+.chat-btn{
+    position: fixed;
+    right:50px;
+    bottom: 50px;
+    background: #9a7b2b;
+    color: white;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+}
+
+.chat-btn:hover{
+    opacity: 1;
+}
+
+.chat-popup{
+    display: none;
+    position: fixed;
+    bottom:80px;
+    right:120px;
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.252);
+    border-radius: 10px;
+}
+
+.show{
+    display: flex;
+}
+
+.chat-area{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.income-msg, .choice{
+    display: flex;
+    align-items: center;
+    padding:10px;
+}
+
+.avatar{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.income-msg .msg{
+    background-color: #9a7b2b;
+    color: white;
+    padding:0.5rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    font-size: small;
+}
+
+#answer{
+    font-size: small;
+    background-color:#f2f4f4;
+    margin: 0.25rem;
+    padding: 5px;
+    border-radius:20px;
+}
+#answer:hover{
+    background-color: #e0e3e3;
+    cursor: pointer;
+}
+#bot2, #bot3, #bot4, #bot5, .user1ans3, .user1ans4{
+    display:none;   
+}
+
+@media (max-width:500px){
+
+    .chat-popup{
+        bottom: 120px;
+        right:10%;
+        width: 80vw;
+    }
+}
